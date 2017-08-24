@@ -33,7 +33,7 @@ var BuildCards = {
 
         for (var i=0;i<array.length;i++) {
             title = array[i].name;
-            sales = array[i].monthlySales;
+            sales = Helpers.dollarize(array[i].monthlySales);
 
             $cardsConatiner.append(this.buildCard(title, sales));
         };
@@ -69,7 +69,7 @@ var BuildCards = {
                                 '<th>1- Year</th>' +
                             '</tr>' +
                             '<tr>' +
-                                '<td class="bold-title"><p>$' + sales + '</p></td>' +
+                                '<td class="bold-title"><p>' + sales + '</p></td>' +
                                 '<td>' +
                                     '<div class="graph-image"></div>' +
                                 '</td>' +
@@ -140,23 +140,23 @@ var BuildCards = {
 
         for (var i=0;i<uniques.length;i++) {
             title = uniques[i].Name;
-            sales = uniques[i].Sales;
+            sales = Helpers.dollarize(uniques[i].Sales);
             bgPos = bgArray[i]
 
             $headers.after(this.buildRow(title, sales, bgPos));
         }
     },
-    buildRow: function(title, cost, bgPos) {
+    buildRow: function(title, sales, bgPos) {
         /**
         * Build a single card row
         * @param {string} title
-        * @param {string} cost
+        * @param {string} sales
         * @param {string} bgPos
         * @return {function}
         */
         var rowHtml =   '<tr>' +
                             '<td><p>' + title + '</p></td>' +
-                            '<td>$' + cost + '</td>' +
+                            '<td>' + sales + '</td>' +
                             '<td>' +
                                 '<div class="graph-image" style="background-position:'+ bgPos +';"></div>' +
                             '</td>' +

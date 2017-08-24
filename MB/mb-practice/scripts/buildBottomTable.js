@@ -33,7 +33,7 @@ var BuildBottomTable = {
 
         for (var i=0;i<array.length;i++) {
             title = array[i].name;
-            sales = array[i].monthlySales;
+            sales = Helpers.dollarize(array[i].monthlySales);
             attendance = array[i].monthlyAttendance;
 
             $tableHeaders.after(this.buildTableRow(title, sales, attendance));
@@ -54,7 +54,7 @@ var BuildBottomTable = {
                                     '<span class="med-text table-more-link">more</span>' +
                                 '</td>' +
                                 '<td>' +
-                                    '<span>$' + sales + '</span>' +
+                                    '<span>' + sales + '</span>' +
                                 '</td>' +
                                 '<td>' +
                                     '<span>' + attendance + '</span> <span class="med-text">visits</span>' +
