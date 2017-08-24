@@ -1,6 +1,6 @@
 ## Notes:
 
-Can be found live on: https://tomgalpin.github.io/mb-practice/
+Can be found live on: https://tomgalpin.github.io/mb-practice/  -- This does not work yet.
 
 1.  Colors, Pixels Distances, and Fonts were done the best I could.
 -- You will also see that I created and used a sprite for most of the images.  I did, however, keep the images in the file so that they can be compared to the sprite.
@@ -11,8 +11,7 @@ Can be found live on: https://tomgalpin.github.io/mb-practice/
 6.  The cards scroll to the right.  I wasn't sure how to set up all five of them from the API call.  So I just made a simple scroll.
 7.  I didn't make it responsive, because I ran out of steam.
 8.  Same goes for making a fully funcational Nav Bar.
-9.  All said and done, I think it represents the specs well.
-10.  And of course, I always welcome any feedback, advice, critiques, etc...
+9.  All said and done, I think it represents the specs well. 
 
 Places of improvement:
 1.  Refactor my CSS/SCSS.
@@ -20,4 +19,5 @@ Places of improvement:
 3.  Refactor JS.
 4.  Maybe put API calls into localStorage or something like that.
 
+And of course, I always welcome any feedback, advice, critiques, etc...
 Thank you, this was pretty fun!!
