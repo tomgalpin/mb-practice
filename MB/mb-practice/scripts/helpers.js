@@ -8,7 +8,6 @@ var Helpers = {
         var numbersWithCommas = num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","),
             dollarized          = '$' + numbersWithCommas;
 
-        console.log(6, dollarized);
         return dollarized;
     }
 };
