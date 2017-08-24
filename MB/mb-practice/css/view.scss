@@ -1,0 +1,86 @@
+/************************* */
+/********* Views ********* */
+/************************* */
+
+.view-container {
+    position: relative;
+    top: 123px;
+    height: 100%;
+    padding: 20px;
+    .column {
+        float: left;
+        height: 100%;
+    }
+    .left-column {
+        width: 15%;
+    }
+    .right-column {
+        @include clearfix;
+        display: inline-block;
+        width: 65%;
+        overflow: hidden;
+    }
+    .cards-container-wrapper {
+        overflow: scroll;
+    }
+    .new-program-container {
+        display: inline-block;
+        float: right;
+        margin-right: 60px;
+        .new-program-title {
+            @extend .bold-title;
+            margin-top: 5px;
+            font-size: 11px;
+        }
+    }
+    .new-program-button {
+        @extend .card-box-shadow;
+        @include border-radius(5px);
+        @include linear-gradient($liner-green-gradient-top, $linear-green-gradient-second, $linear-green-gradient-third);
+        width: 73px;
+        height: 65px;
+        font-size: 12px;
+        border: 1px solid $button-border;
+        div {
+            @extend .bg-plus_icon;
+            margin: 0 auto;
+        }
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    .row {
+        @include clearfix;
+    }
+    .bottom-table-container {
+        display: inline-block;
+        width: 100%;
+        margin-top: 30px;
+    }
+    .bottom-table {
+        width: 100%;
+        margin-bottom: 50px;
+        tr {
+            text-align: left;
+            height: 25px;
+            color: $dark-brown;
+            &:first-child {
+                height: 25px;
+                color: $green-brown;
+                border-bottom: 1px solid $light-brown;
+            }
+        }
+        th, td {
+            display: inline-block;
+            width: 100px;
+            font-size: 12px;
+        }
+        td { margin-top: 0px; }
+        .class-title { margin-top: 10px; }
+        .table-more-link {
+            margin-right: 20px;
+            color: $green-brown;
+
+        }
+    }
+}

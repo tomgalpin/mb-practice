@@ -1,0 +1,59 @@
+/************************************ */
+/********* New Program Form ********* */
+/************************************ */
+
+.new-program-container {
+    margin: 20px 20px 30px 20px;
+    h1 {
+        @extend .bold-title;
+        text-align: center;
+    }
+    .divider {
+        margin: 10px 0 15px 0;
+        border-bottom: 1px solid $gray;
+    }
+    .form-items {
+        width: 90%;
+        margin: 0 auto 10px auto;
+    }
+    .form-item {
+        float: left;
+        width: 50%;
+    }
+    .label-container {
+        width: 50%;
+    }
+    .label-note {
+        width: 80%;
+        margin: 5px auto;
+        text-align: center;
+        font-size: 8px;
+    }
+    label { font-size: 12px; }
+    select,
+    input {
+        min-height: 20px;
+        border: 1px solid $black;
+    }
+    select,
+    input[type="text"],
+    button[type="submit"] {
+        @include border-radius(3px);
+        width: 100%;
+    }
+    select {
+        height: 90px;
+    }
+    button[type="submit"] {
+        height: 50px;
+        font-size: 20px;
+        font-weight: bold;
+        background: $blue-gray;
+        color: $white;
+        border: 1px solid $blue-gray;
+        &:hover {
+            cursor: pointer;
+            color: $light-gray;
+        }
+    }
+}

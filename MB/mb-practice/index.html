@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="MindBody Project">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>MindBody Project</title>
+        <link rel="shortcut icon" type="image/x-icon"  href="https://www.mindbodyonline.com/sites/all/themes/mbo/favicon.ico">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <!-- NavBar -->
+        <nav>
+            <div class="navbar-items-container">
+                <a class="navbar-brand" target="_blank" href="http://urbanyoga.org">
+                    <img src="assets/logo.png">
+                </a>
+                <div class="navbar-items">
+                    <ul>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">
+                                <div class="navbar-separator active"></div>
+                                Dashboard
+                            </a>
+                        </li>
+                        <li class="nav-item not-wide">
+                            <a class="nav-link" href="#">
+                                <div class="navbar-separator active"></div>
+                                Sign In
+                            </a>
+                        </li>
+                        <li class="nav-item not-wide">
+                            <a class="nav-link" href="#">
+                                <div class="navbar-separator"></div>
+                                Classes
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <div class="navbar-separator"></div>
+                                Workshops
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <div class="navbar-separator"></div>
+                                Appointments
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <div class="navbar-separator"></div>
+                                Client Home
+                            </a>
+                        </li>
+                        <li class="nav-item not-wide">
+                            <a class="nav-link" href="#">
+                                <div class="navbar-separator"></div>
+                                Retail
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="navbar-sub-container">
+                <div class="navbar-sub-items">
+                    <ul>
+                        <li class="navbar-sub-item">
+                            <a>Dashboard</a>
+                        </li>
+                        <li class="navbar-sub-item">
+                            <a class="active">Business Overview</a>
+                        </li>
+                        <li class="navbar-sub-item">
+                            <a>Schedule</a>
+                        </li>
+                        <li class="navbar-sub-item">
+                            <a>Reports</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+        <!-- NavBar -->
+
+        <!-- View -->
+        <div class="view-container">
+            <div class="column left-column">
+                <div class="new-program-container">
+                    <button class="new-program-button"><div></div></button>
+                    <div class="new-program-title">New Program</div>
+                </div>
+            </div>
+            <div class="column right-column">
+                <div class="cards-container-wrapper">
+                    <div class="row cards-container"></div> <!-- Cards Container -->
+                </div>
+                <div class="row bottom-table-container"> <!-- Bottom Table Container -->
+                    <table class="bottom-table">
+                        <tr class="bottom-table-headers">
+                            <th>
+                                <span>All Programs</span>
+                            </th>
+                            <th>
+                                <span class="med-text">Monthly Sales</span>
+                            </th>
+                            <th>
+                                <span class="med-text">Monthly Attendance</span>
+                            </th>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- View -->
+
+        <!-- modal-container -->
+        <div class="modal-container">
+            <div class="modal-backdrop"></div>
+            <div class="modal-body">
+                <div class="modal-close">X</div>
+                <div class="modal-content">
+                    <div class="new-program-container">
+                        <h1>What would you like in your New Program?</h1>
+                        <div class="divider"></div>
+                        <div class="form-items-container">
+
+                            <!-- Form -->
+                            <form>
+                                <div class="form-items">
+                                    <div class="label-container form-item">
+                                        <label class="form-label" for="programType">Program Type:</label>
+                                    </div>
+                                    <div class="form-item">
+                                        <label class="form-label" for="programType">
+                                            <input type="radio" name="programType" value="countSeries"><span>Count Series</span>
+                                        </label>
+                                        <br>
+                                        <label>
+                                            <input type="radio" name="programType" value="timeSeries"><span>Time Series</span>
+                                        </label>
+                                        <br>
+                                        <label>
+                                            <input type="radio" name="programType" value="membership"><span>Membership</span>
+                                        </label>
+                                        <br>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <!-- radio -->
+                                <div class="form-items">
+                                    <div class="label-container form-item">
+                                        <label class="form-label" for="programName">Program Name:</label>
+                                    </div>
+                                    <div class="form-item">
+                                        <input type="text" class="form-control" name="programName" placeholder="Enter Name" required>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div><!-- input -->
+                                <div class="form-items">
+                                    <div class="label-container form-item">
+                                        <label>Allow Online Scheduling:</label>
+                                    </div>
+                                    <div class="form-item">
+                                        <input type="checkbox" name="onlineScheduling" required>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div><!-- checkbox -->
+                                <div class="form-items">
+                                    <div class="label-container form-item">
+                                        <label class="form-label" for="capacity">Default Capacity:</label>
+                                    </div>
+                                    <div class="form-item">
+                                        <input type="text" class="form-control" name="capacity" placeholder="Enter Capacity" required>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div><!-- input -->
+                                <div class="form-items">
+                                    <div class="label-container form-item">
+                                        <label for="programTabs">
+                                            Tabs for this Program:
+                                            <div class="label-note">
+                                                <span class="italic">(choose more than by holding down 'ctr' button)</span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="form-item">
+                                        <select multiple class="form-control" name="programTabs" required>
+                                            <option for="programTabs" value="classes">Classes</option>
+                                            <option for="programTabs" value="appointments">Appointments</option>
+                                            <option for="programTabs" value="workshops">Workshops</option>
+                                            <option for="programTabs" value="outside">Outside</option>
+                                            <option for="programTabs" value="inside">Inside</option>
+                                            <option for="programTabs" value="gym">Gym</option>
+                                        </select>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div><!-- Multi-Select -->
+                                <div class="form-items">
+                                    <button type="submit" class="form-submit">Submit</button>
+                                </div>
+                            </form>
+                            <!-- Form -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- modal-container -->
+
+        <!-- JQuery -->
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript" src="scripts/getData.js"></script>
+        <script type="text/javascript" src="scripts/buildCards.js"></script>
+        <script type="text/javascript" src="scripts/buildBottomTable.js"></script>
+        <script type="text/javascript" src="scripts/cardEvents.js"></script>
+        <script type="text/javascript" src="scripts/modalEvents.js"></script>
+        <script type="text/javascript" src="scripts/clickEvents.js"></script>
+        <script type="text/javascript" src="scripts/main.js"></script>
+    </body>
+</html>

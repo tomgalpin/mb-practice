@@ -1,0 +1,82 @@
+/************ Mixins ************ */
+
+/******************************** */
+/******** Border Radius ********* */
+/******************************** */
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    border-radius: $radius;
+    background-clip: padding-box;  /* stops bg color from leaking outside the border: */
+}
+
+/******************************** */
+/******* Radial Gradient ******** */
+/******************************** */
+@mixin radial-gradient($from, $to) {
+    background: -moz-radial-gradient(center, ellipse cover, $from 0%, $to 100%);
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, $from), color-stop(100%, $to));
+    background: -webkit-radial-gradient(center, ellipse cover, $from 0%, $to 100%);
+    background: -o-radial-gradient(center, ellipse cover, $from 0%, $to 100%);
+    background: -ms-radial-gradient(center, ellipse cover, $from 0%, $to 100%);
+    background: radial-gradient(ellipse at center, $from 0%, $to 100%);
+    background-color: $from;
+}
+
+/******************************** */
+/******* Linear Gradient ******** */
+/******************************** */
+@mixin linear-gradient($top, $second, $third){
+    background: $top;
+    background: -moz-linear-gradient(top, $top 0%, $second 3%, $third 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, $top), color-stop(3%, $second), color-stop(100%, $third));
+    background: -webkit-linear-gradient(top, $top 0%, $second 3%, $third 100%);
+    background: -o-linear-gradient(top, $top 0%, $second 3%, $third 100%);
+    background: -ms-linear-gradient(top, $top 0%, $second 3%, $third 100%);
+    background: linear-gradient(to bottom, $top 0%, $second 3%, $third 100%);
+}
+
+/******************************** */
+/************ Calc ************** */
+/******************************** */
+@mixin calc($property, $expression) {
+    #{$property}: -moz-calc(#{$expression});
+    #{$property}: -webkit-calc(#{$expression});
+    #{$property}: calc(#{$expression});
+}
+
+/******************************** */
+/********** Clearfix ************ */
+/******************************** */
+@mixin clearfix {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+/******************************** */
+/******** Graph BG Sprite ******* */
+/******************************** */
+@mixin graph-bg-sprite($x-axis, $y-axis) {
+    width: 65px;
+    height: 20px;
+    background: url('../assets/sprites.png') $x-axis $y-axis;
+}
+
+/******************************** */
+/********* Pencil Sprite ******** */
+/******************************** */
+@mixin bg-pencil_icons($y-axis) {
+    width: 18px;
+    height: 20px;
+    background: url('../assets/sprites.png') -96px $y-axis;
+}
+
+/******************************** */
+/******* Table Cell Align ******* */
+/******************************** */
+@mixin table-cell-align($position) {
+    display: table-cell;
+    vertical-align: $position;
+}

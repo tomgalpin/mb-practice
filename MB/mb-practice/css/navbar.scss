@@ -1,0 +1,105 @@
+/************************** */
+/********* Navbar ********* */
+/************************** */
+
+$nav-item-height: 70px;
+
+nav {
+    min-width: $body-min-width;
+    background-color: $light-green;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 500;
+    ul {
+        display: block;
+    }
+    li {
+        display: inline-block;
+    }
+    a {
+        display: inline-block;
+        text-align: center;
+        text-decoration: none;
+    }
+    .navbar-items-container {
+        position: relative;
+        height: $nav-item-height;
+        border-bottom: 1px solid $light-gray;
+    }
+    .navbar-brand {
+        margin: 12px 0 0 18px;
+    }
+    .navbar-items {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        height: 40px;
+        border-top: 1px solid $green-gray;
+        border-left: 1px solid $green-gray;
+        ul, li{ height: 100%; }
+        li {
+            @include linear-gradient($white, $linear-white-gradient-second, $linear-white-gradient-third);
+            display: block;
+            float: left;
+            width: 130px;
+            line-height: 40px;
+        }
+        a {
+            width: 100%;
+            color: $med-green;
+            &:hover {
+                color: $blue-gray;
+            }
+        }
+        .not-wide { width: 90px; }
+    }
+    .navbar-separator {
+        height: 30px;
+        position: absolute;
+        top: 50%;
+        margin-top: -15px;
+        border-left: 1px solid $light-gray;
+        &.active { border: 0px;}
+    }
+    .nav-item {
+        &.active {
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            padding: 5px 5px 0 5px;
+            margin-top: -6px;
+
+            box-shadow: 19px -9px 30px -13px $light-gray, -19px -9px 30px -13px $light-gray;
+            background-color: $white;
+            background: $white;
+            border-top: 1px solid $light-gray;
+            border-left: 1px solid $light-gray;
+            border-right: 1px solid $light-gray;
+            border-bottom: 1px solid $white;
+            a { color: $blue-gray; }
+        }
+    }
+    .navbar-sub-container {
+        height: 52px;
+        background-color: $white;
+        border-bottom: 1px solid $light-brown;
+    }
+    .navbar-sub-items {
+        display: inline-block;
+        height: 100%;
+        margin-left: 100px;
+        line-height: 50px;
+        a {
+            color: $gray;
+            margin-right: 35px;
+            &.active {
+                color: $blue-gray;
+            }
+            &:hover {
+                @extend .active;
+                cursor: pointer;
+            }
+        }
+    }
+}

@@ -1,0 +1,152 @@
+/******************************* */
+/********* Cards *************** */
+/******************************* */
+
+.card {
+    @extend .card-box-shadow;
+    @include border-radius(5px);
+    margin: 0 20px 20px 10px;
+    position: relative;
+    width: 243px;
+    float: left;
+    background-color: $white;
+    border: 1px solid $light-brown;
+    &:first-child {
+        margin: 0 20px 0px 0;
+    }
+    .pencil {
+        position: absolute;
+        top: 17px;
+        right: 19px;
+        width: 20px;
+        height: 20px;
+        border: 1px solid $light-tan;
+        @include bg-pencil_icons(-212px);
+        @include border-radius(3px);
+        &:hover {
+            @include bg-pencil_icons(-229px);
+            cursor: pointer;
+        }
+    }
+    .bar-graph { @extend .bg-graph; }
+    .card-container {
+        margin: 20px 20px 15px 20px;
+    }
+    .middle-container {
+        margin: 15px 0 0 0;
+        height: 48px;
+        border-top: 1px solid $light-brown;
+        border-bottom: 1px solid $light-brown;
+        background-color: $tan;
+        .column {
+            &:first-child {
+                width: 60px;
+                margin-left: 20px;
+            }
+            &:last-child {
+                float: right;
+                margin-right: 20px;
+            }
+        }
+        table {
+            height: 100%;
+            tr:not(:first-child) { border-bottom: 0px; }
+            th {
+                font-size: 10px;
+                &:last-child { text-align: center;}
+            }
+            td:last-child {
+                height: 30px;
+            }
+        }
+        .graph-image {
+            @extend .bg-spark_line;
+        }
+    }
+    .middle-title-container {
+        position: relative;
+        top: 50%;
+        margin-top: -10px;
+        p {
+            &:first-child   {
+                font-size: 8px;
+                margin-bottom: 2px;
+            }
+            &:last-child    { font-size: 10px; }
+        }
+    }
+    .bottom-container {
+        display: none;
+        margin-bottom: 0px;
+        &.active {
+            display: block;
+        }
+    }
+    .card-title { font-size: 13px; }
+    .graph-title {
+        font-size: 9px;
+        margin: 20px 0 5px 0;
+    }
+    table {
+        width: 100%;
+        tr:not(:first-child) {
+            border-bottom: 1px solid $very-light-tan;
+        }
+        th {
+            @extend .light-text;
+            @include table-cell-align(bottom);
+            font-size: 8px;
+            text-align: left;
+            &:first-child {
+                font-size: 10px;
+            }
+            &:nth-child(2) {
+                width: 55px;
+                padding-left: 10px;
+            }
+        }
+        td {
+            vertical-align: middle;
+            &:nth-child(2) {
+                @extend th;
+                width:  55px;
+                padding-left: 10px;
+                line-height: 20px;
+            }
+            p {
+                @extend .bold-title;
+                @extend .ellipsis-text;
+                max-width: 82px;
+                font-size: 10px;
+            }
+        }
+        .graph-image {
+            &.first-graph   { @include graph-bg-sprite(-12px, -123px); }
+            &.second-graph  { @include graph-bg-sprite(-12px, -141px); }
+            &.third-graph   { @include graph-bg-sprite(-12px, -159px); }
+            &.fourth-graph  { @include graph-bg-sprite(-12px, -177px); }
+            &.fifth-graph   { @include graph-bg-sprite(-12px, -195px); }
+            &.sixth-graph   { @include graph-bg-sprite(-12px, -213px); }
+            &.seventh-graph { @include graph-bg-sprite(-12px, -231px); }
+        }
+    }
+    .footer {
+        height: 25px;
+        line-height: 25px;
+        margin-bottom: 5px;
+    }
+    .more-less {
+        @extend .light-text;
+        text-decoration: none;
+        font-size: 8px;
+        margin-left: 20px;
+        &:hover {
+            cursor: pointer;
+            color: $black;
+        }
+        span {
+            display: none;
+            &.active { display: inline-block; }
+        }
+    }
+}
