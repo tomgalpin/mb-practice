@@ -1,6 +1,6 @@
 ## Notes:
 
-Can be found live on: https://tomgalpin.github.io/mb-practice/  -- This does not work yet.
+Can be found live on: https://tomgalpin.github.io/mb-practice/MB/mb-practice/
 
 1.  Colors, Pixels Distances, and Fonts were done the best I could.
 -- You will also see that I created and used a sprite for most of the images.  I did, however, keep the images in the file so that they can be compared to the sprite.
