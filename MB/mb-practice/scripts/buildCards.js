@@ -135,30 +135,42 @@ var BuildCards = {
         var title,
             sales,
             uniques     = this.getUniques(data).reverse(), // reverse the order to match the specs
-            $headers    = $('.cards-container').find('.table-headers');
+            $headers    = $('.cards-container').find('.table-headers'),
+            bgArray     = this.spriteBgPositions;
 
         for (var i=0;i<uniques.length;i++) {
             title = uniques[i].Name;
             sales = uniques[i].Sales;
+            bgPos = bgArray[i]
 
-            $headers.after(this.buildRow(title, sales));
+            $headers.after(this.buildRow(title, sales, bgPos));
         }
     },
-    buildRow: function(title, cost) {
+    buildRow: function(title, cost, bgPos) {
         /**
         * Build a single card row
         * @param {string} title
         * @param {string} cost
+        * @param {string} bgPos
         * @return {function}
         */
         var rowHtml =   '<tr>' +
                             '<td><p>' + title + '</p></td>' +
                             '<td>$' + cost + '</td>' +
                             '<td>' +
-                                '<div class="graph-image first-graph"></div>' +
+                                '<div class="graph-image" style="background-position:'+ bgPos +';"></div>' +
                             '</td>' +
                         '</tr>';
 
         return rowHtml;
-    }
+    },
+    spriteBgPositions: [
+                            "-12px -123px",
+                            "-12px -141px",
+                            "-12px -159px",
+                            "-12px -177px",
+                            "-12px -195px",
+                            "-12px -213px",
+                            "-12px -231px"
+                        ]
 };

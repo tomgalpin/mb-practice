@@ -121,13 +121,7 @@
             }
         }
         .graph-image {
-            &.first-graph   { @include graph-bg-sprite(-12px, -123px); }
-            &.second-graph  { @include graph-bg-sprite(-12px, -141px); }
-            &.third-graph   { @include graph-bg-sprite(-12px, -159px); }
-            &.fourth-graph  { @include graph-bg-sprite(-12px, -177px); }
-            &.fifth-graph   { @include graph-bg-sprite(-12px, -195px); }
-            &.sixth-graph   { @include graph-bg-sprite(-12px, -213px); }
-            &.seventh-graph { @include graph-bg-sprite(-12px, -231px); }
+            @include graph-bg-sprite(-12px, -123px);
         }
     }
     .footer {

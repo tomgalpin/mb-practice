@@ -433,34 +433,10 @@ nav {
       .card table td p {
         max-width: 82px;
         font-size: 10px; }
-    .card table .graph-image.first-graph {
+    .card table .graph-image {
       width: 65px;
       height: 20px;
       background: url("../assets/sprites.png") -12px -123px; }
-    .card table .graph-image.second-graph {
-      width: 65px;
-      height: 20px;
-      background: url("../assets/sprites.png") -12px -141px; }
-    .card table .graph-image.third-graph {
-      width: 65px;
-      height: 20px;
-      background: url("../assets/sprites.png") -12px -159px; }
-    .card table .graph-image.fourth-graph {
-      width: 65px;
-      height: 20px;
-      background: url("../assets/sprites.png") -12px -177px; }
-    .card table .graph-image.fifth-graph {
-      width: 65px;
-      height: 20px;
-      background: url("../assets/sprites.png") -12px -195px; }
-    .card table .graph-image.sixth-graph {
-      width: 65px;
-      height: 20px;
-      background: url("../assets/sprites.png") -12px -213px; }
-    .card table .graph-image.seventh-graph {
-      width: 65px;
-      height: 20px;
-      background: url("../assets/sprites.png") -12px -231px; }
   .card .footer {
     height: 25px;
     line-height: 25px;
