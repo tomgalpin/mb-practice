@@ -1,8 +1,9 @@
 ## Notes:
 
-Can be found live on:
+Can be found live on: https://tomgalpin.github.io/mb-practice/
 
 1.  Colors, Pixels Distances, and Fonts were done the best I could.
+-- You will also see that I created and used a sprite for most of the images.  I did, however, keep the images in the file so that they can be compared to the sprite.
 2.  I decided to make this a bit more fun and try to build all of this without a framework, and more/straigt Javascript (and Jquery for ease).
 3.  In retrospect, this took way-way longer.  :(
 4.  I did the same for not sure a CSS framework, like Bootrap.  This also took a ton longer.  Especially on the form.
